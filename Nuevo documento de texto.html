@@ -1,0 +1,82 @@
+<canvas id="canvas" width="400px" height="400px">
+<script>
+function elipse() {
+
+  var canvas = document.getElementById('canvas');
+  if (canvas.getContext) {
+     var ctx = canvas.getContext('2d');
+
+    ctx.beginPath();
+
+    ctx.ellipse(100, 152, 20, 49.6, 1.6, 0,2*Math.PI);
+    ctx.fillStyle = '#3BB143';
+   //ctx.arc(75, 75, 50, 0, Math.PI * 2, true); // 
+    ctx.stroke();
+ctx.fill();
+  }
+
+
+}
+function triangulo() {
+  var canvas = document.getElementById('canvas');
+  if (canvas.getContext) {
+     var ctx = canvas.getContext('2d');
+     ctx.beginPath();
+ctx.fillStyle = '#0B6623';
+ctx.moveTo(100, 50);
+ctx.lineTo(50, 150);
+ctx.lineTo(150, 150);
+ctx.fill();
+
+   //ctx.arc(75, 75, 50, 0, Math.PI * 2, true); // 
+    ctx.stroke();
+  }
+}
+
+function elipseT() {
+  var canvas = document.getElementById('canvas');
+  if (canvas.getContext) {
+     var ctx = canvas.getContext('2d');
+
+ctx.translate(16,0);
+
+ctx.beginPath();
+ctx.restore();
+//ctx.scale(50, 50);
+    ctx.ellipse(100, 152, 20*2, 49.6*2, 1.6, 0,2*Math.PI);
+    ctx.fillStyle = '#3BB143';
+   //ctx.arc(75, 75, 50, 0, Math.PI * 2, true); // 
+    ctx.stroke();
+ctx.fill();
+  }
+
+
+}
+function trianguloT() {
+  var canvas = document.getElementById('canvas');
+  if (canvas.getContext) {
+     var ctx = canvas.getContext('2d');
+ctx.translate(150, 0);
+ctx.restore();
+//ctx.scale(50, 50);
+     ctx.beginPath();
+ctx.fillStyle = '#0B6623';
+ctx.moveTo(110, 8);
+ctx.lineTo(15, 150);
+ctx.lineTo(218, 150);
+ctx.fill();
+
+   //ctx.arc(75, 75, 50, 0, Math.PI * 2, true); // 
+    ctx.stroke();
+  }
+}
+
+triangulo();
+elipse();
+trianguloT();
+elipseT();
+
+
+
+
+</script>
